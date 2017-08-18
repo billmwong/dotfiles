@@ -1,0 +1,25 @@
+[
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+  { "keys": ["super+t"], "command": "new_file" },
+  { "keys": ["ctrl+w"], "command": "close" },
+  { "keys": ["super+alt+n"], "command": "find_next_conflict" },
+  { "keys": ["super+alt+o"], "command": "keep", "args": { "keep": "ours" } },
+  { "keys": ["super+alt+t"], "command": "keep", "args": { "keep": "theirs" } },
+  { "keys": ["super+alt+a"], "command": "keep", "args": { "keep": "ancestor" } },
+  { "keys": ["super+alt+c"], "command": "list_conflict_files" },
+  {
+    "keys": [
+        "super+e"
+    ],
+    "args": {
+        "action": "expand_abbreviation"
+    },
+    "command": "run_emmet_action",
+    "context": [
+        {
+            "key": "emmet_action_enabled.expand_abbreviation"
+        }
+    ]
+  },
+]
