@@ -83,19 +83,26 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gh="git push"
+alias gp="git pull"
+alias gch="git checkout"
+alias gd="git dsf"
+alias gl='git log --graph --color --pretty=tformat:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"'
+alias gdc="git dsf --cached"
+
+export PATH="/usr/local/sbin:$PATH"
+
 
 bindkey -v
 export KEYTIMEOUT=1
 
-alias mountpublic="(mkdir -p ~/Public) && (sudo mount //fsvs01/Public ~/Public -o user=dabrahams,workgroup=olin.edu,uid=david)"
 alias wifi="sudo service network-manager restart"
 
 function cd () {
-	builtin cd "$@" && ls
+  builtin cd "$@" && ls
 }
 
 # TODO: show more that one directory level in prompt
