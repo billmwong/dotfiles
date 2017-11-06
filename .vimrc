@@ -10,7 +10,7 @@ let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_param_description_separator = ' - '
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
-set termguicolors
+set t_Co=256
 set background=dark
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
