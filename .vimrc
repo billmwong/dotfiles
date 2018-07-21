@@ -3,12 +3,6 @@ Plug 'jiangmiao/auto-pairs' " autocomplete matching quotes and paren
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion.
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 let g:javascript_plugin_jsdoc = 1
-Plug 'heavenshell/vim-jsdoc' " automatically generate JSDocs
-" Using ctrl-l
-nmap <silent> <C-l> <Plug>(jsdoc)
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description = 1
-let g:jsdoc_param_description_separator = ' - '
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
 set t_Co=256
 set background=dark
@@ -50,7 +44,7 @@ noremap ; :
 noremap : ;
 nnoremap j gj
 nnoremap k gk
-inoremap jj <Esc>
+inoremap jk <Esc>
 
 " Remap F5 to bring up a list of buffers, and allow user to then enter a
 " number and switch to it

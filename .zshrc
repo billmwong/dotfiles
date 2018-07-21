@@ -89,9 +89,10 @@ alias gc="git commit -m"
 alias gh="git push"
 alias gp="git pull"
 alias gch="git checkout"
-alias gd="git dsf"
+alias gd="git diff"
 alias gl='git log --graph --color --pretty=tformat:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"'
-alias gdc="git dsf --cached"
+alias gdc="git diff --cached"
+alias ag="ag" # override ag -> apt-get alias
 
 export PATH="/usr/local/sbin:$PATH"
 
