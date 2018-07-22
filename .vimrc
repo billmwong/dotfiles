@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs' " autocomplete matching quotes and paren
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion.
+let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 let g:javascript_plugin_jsdoc = 1
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
@@ -28,13 +29,14 @@ Plug 'vim-scripts/vim-auto-save'
 let g:auto_save = 1  " enable AutoSave on Vim startup
 call plug#end()
 
-" End plugged configuration
-" This is all of my customization
-colorscheme gruvbox " I think this works on the airline bar also
-let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
-set incsearch
+" Non-plugin configuration
+colorscheme gruvbox
+set incsearch " start search as you type
+set hlsearch " highlight search results
+" switch ; and : in normal mode
 noremap ; :
 noremap : ;
+" always go visually down and up even with wrapped lines
 nnoremap j gj
 nnoremap k gk
 inoremap jk <Esc>
@@ -48,8 +50,6 @@ syntax on
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnifunc=javacomplete#Complete
 autocmd FileType python setlocal tw=79
-" Make F9 execute python scripts
-autocmd FileType python nnoremap <buffer> <F9> :w<cr> :exec '!clear; python' shellescape(@%, 1)<cr>
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
 
 autocmd FocusLost * set norelativenumber
@@ -71,7 +71,6 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
-" nnoremap <esc> :noh<return><esc>
 
 set relativenumber
 set nu
