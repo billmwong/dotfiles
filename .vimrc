@@ -6,7 +6,7 @@ let g:javascript_plugin_jsdoc = 1
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
 set t_Co=256
 set background=dark
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " search for files with c-p
 Plug 'junegunn/fzf.vim'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
 nnoremap <c-p> :FZF<cr> " open with ctrl-P
@@ -16,23 +16,16 @@ set laststatus=2 " airline status bar always on
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
-Plug 'artur-shaik/vim-javacomplete2' " Java autocomplete
-Plug 'tpope/vim-unimpaired' " Some useful key bindings
-" Plug 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
-" let g:sneak#label = 1
-Plug 'airblade/vim-rooter'
+Plug 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
+let g:sneak#label = 1
+Plug 'airblade/vim-rooter' " changes working dir to project root
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'help', 'qf', 'dirvish', 'markdown']
 Plug 'w0rp/ale' " Async linting
 let g:ale_linters = {'javascript': ['eslint']}
-" Auto fix javascript code on save
-let g:ale_fixers = {'javascript': ['eslint']}
-let g:ale_fix_on_save = 1
-" Jump to previous and next error with j/k
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-Plug 'Yggdroot/indentLine'
-Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'Yggdroot/indentLine' " vertical bars with indents
+Plug 'vim-scripts/vim-auto-save'
+let g:auto_save = 1  " enable AutoSave on Vim startup
 call plug#end()
 
 " End plugged configuration
