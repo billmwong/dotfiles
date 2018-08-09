@@ -1,16 +1,28 @@
 #!/bin/bash
-sudo apt-get -y install curl
-sudo add-apt-repository ppa:jonathonf/vim
-sudo apt-get update
-sudo apt-get install silversearcher-ag
-sudo apt-get -y install vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-cd $HOME
-sudo apt-get -y install build-essential cmake python-dev python3-dev
-sudo npm install -g tern # run setup-js first
-wget https://github.com/billmwong/dotfiles/raw/master/.vimrc
-vim +PlugInstall
 
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    sudo apt-get -y install curl
+    sudo add-apt-repository ppa:jonathonf/vim
+    sudo apt-get update
+    sudo apt-get install silversearcher-ag
+    sudo apt-get -y install vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    cd $HOME
+    sudo apt-get -y install build-essential cmake python-dev python3-dev
+    sudo npm install -g tern # run setup-js first
+    wget https://github.com/billmwong/dotfiles/raw/master/.vimrc
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install the_silver_searcher
+    brew install vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    cd $HOME
+    brew install cmake
+    sudo npm install -g tern # run setup-js first
+    curl -O https://raw.githubusercontent.com/billmwong/dotfiles/master/.vimrc
+fi
+
+vim +PlugInstall
 # Compile YouCompleteMe
 cd ~/.vim/plugged/YouCompleteMe
 ./install.py --clang-completer

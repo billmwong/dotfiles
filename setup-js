@@ -1,6 +1,13 @@
 #!/bin/bash
 
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+    touch ~/.bash_profile
+    echo "source ~/.bashrc" >> ~/.bash_profile
+fi
+
 nvm install --lts
 
 npm i diff-so-fancy -g
