@@ -5,7 +5,7 @@ ZSH_THEME="robbyrussell"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z)
+plugins=(git z fzf)
 _Z_CMD=f
 source $ZSH/oh-my-zsh.sh
 
@@ -29,7 +29,7 @@ alias ag="ag" # override ag -> apt-get alias
 function gcob() {
     git checkout $(git for-each-ref --sort=-authordate:iso8601 --format='%(color:green)%(authordate:iso8601)%09%(color:white)%(refname:short)' refs/heads/ | fzf --height=40% --ansi | awk '{print $4}')
 }
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # for gcob
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # for gcob
 
 function agr { ag -0 -l "$1" | xargs -0 sed -i "" "s/$1/$2/g"; } # ag and replace
 
