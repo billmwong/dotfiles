@@ -38,6 +38,11 @@ source ~/.bash_profile
 export PATH="/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH"
 
 bindkey -v # binds keys to vi-like bindings
+bindkey "^R" fzf-history-widget
+bindkey "^H" beginning-of-line
+bindkey "^L" end-of-line
+bindkey "^J" backward-word
+bindkey "^K" forward-word
 export KEYTIMEOUT=1 # 10ms
 
 # export NVM_DIR="$HOME/.nvm"
