@@ -33,7 +33,8 @@ function gcob() {
 
 function agr { ag -0 -l "$1" | xargs -0 sed -i "" "s/$1/$2/g"; } # ag and replace
 
-source ~/.bash_profile
+# don't have a bash_profile by default on new machine
+# source ~/.bash_profile
 
 export PATH="/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH"
 
