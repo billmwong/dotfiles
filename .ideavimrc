@@ -1,0 +1,5 @@
+set commentary
+set surround
+set argtextobj
+let g:argtextobj_pairs="(:),[:]"
+source ~/.vimrc
