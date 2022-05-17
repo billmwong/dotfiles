@@ -18,11 +18,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     cd $HOME
     brew install cmake
-    sudo npm install -g tern # run setup-js first
+    # sudo npm install -g tern # run setup-js first
     curl -O https://raw.githubusercontent.com/billmwong/dotfiles/master/.vimrc
 fi
 
 vim +PlugInstall
 # Compile YouCompleteMe
-cd ~/.vim/plugged/YouCompleteMe
-./install.py --clang-completer
+# cd ~/.vim/plugged/YouCompleteMe
+# ./install.py --clang-completer
