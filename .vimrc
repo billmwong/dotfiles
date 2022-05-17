@@ -67,8 +67,8 @@ map <Enter> o<ESC>k
 xnoremap p "_dP
 " stamp over current word with yanked text
 nnoremap P "_diwP
-" split comma-separated values on this line into separate lines
-nnoremap s, V:s/, /,\r/g<CR>v{=
+" split comma-separated values inside the parentheses into separate lines
+nnoremap s, vi(ovi<CR><Esc>vi(va, <Esc>V:s/, /,\r/g<CR>va(=j^:noh<CR>
 " yank until end of line
 nnoremap Y y$
 " map 9 to ( as a text object (doesn't work in ideavim)
