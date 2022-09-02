@@ -51,3 +51,4 @@ export KEYTIMEOUT=1 # 10ms
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias v=". venv/bin/activate"
+alias ch="charm ./"
