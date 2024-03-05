@@ -3,7 +3,7 @@ Scripts to setup dev environment.
 # Terminal and zsh
 * Download iTerm from https://iterm2.com/
 * Make sure keyboard shortcuts for next/previous/open/close tab work (should be in BTT)
-* *In home directory:
+* In home directory:
 ```sh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh
 
