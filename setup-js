@@ -11,4 +11,3 @@ fi
 nvm install --lts
 
 npm i diff-so-fancy -g
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
