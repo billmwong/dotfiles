@@ -8,7 +8,7 @@ Scripts to setup dev environment.
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh
 
 git clone https://github.com/billmwong/dotfiles.git
-echo "source $HOME/dotfiles/.zshrc" >> ~/.zshrc
+echo "source ~/dotfiles/.zshrc" >> ~/.zshrc
 chsh -s /bin/zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install fzf
@@ -17,7 +17,7 @@ brew install fzf
 * Remove any excess auto-loaded things in .zshrc. It should look like this:
 ```
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-source $HOME/dotfiles/.zshrc
+source ~/dotfiles/.zshrc
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ```
 
@@ -43,7 +43,7 @@ brew install the_silver_searcher
 brew install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 brew install cmake
-echo "source $HOME/dotfiles/.vimrc" >> ~/.vimrc
+echo "source ~/dotfiles/.vimrc" >> ~/.vimrc
 curl -O https://raw.githubusercontent.com/billmwong/dotfiles/master/.vimrc
 vim +PlugInstall
 ```
