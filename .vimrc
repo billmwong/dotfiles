@@ -38,9 +38,8 @@ call plug#end()
 colorscheme gruvbox
 set incsearch " start search as you type
 set hlsearch " highlight search results
-" switch ; and : in normal mode
-nnoremap ; :
-nnoremap : ;
+
+nnoremap <Space> :
 " find again with ,
 nnoremap , ;
 " always go visually down and up even with wrapped lines
