@@ -13,7 +13,8 @@ source $ZSH/oh-my-zsh.sh
 # Git aliases
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit -m"
+alias gc="git commit"
+alias gcm="git commit -m"
 alias gac="git add -A && git commit -m"
 function gach { git add -A && git commit -m "$1" && git push }
 alias gh="git push"
@@ -25,6 +26,7 @@ alias gl='git log --graph --color --pretty=tformat:"%x1b[31m%h%x09%x1b[32m%d%x1b
 alias gdc="git diff --cached"
 alias grom="git rebase -i origin/master"
 alias gfr="git fetch && git rebase -i origin/master"
+alias gfm="git fetch && git merge origin/master"
 alias ag="ag" # override ag -> apt-get alias
 function gcob() {
     git checkout $(git for-each-ref --sort=-authordate:iso8601 --format='%(color:green)%(authordate:iso8601)%09%(color:white)%(refname:short)' refs/heads/ | fzf --height=40% --ansi | awk '{print $4}')
