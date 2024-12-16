@@ -19,6 +19,7 @@ alias gac="git add -A && git commit -m"
 function gach { git add -A && git commit -m "$1" && git push }
 alias gh="git push"
 alias ghf="git push -f"
+alias ghv="git push --no-verify"
 alias gp="git pull"
 alias gch="git checkout"
 alias gd="git diff"
