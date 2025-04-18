@@ -94,10 +94,10 @@ autocmd Filetype javascript setlocal softtabstop=4 shiftwidth=4 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab
 autocmd FileType python setlocal softtabstop=4 shiftwidth=4 tw=100 expandtab
 
-autocmd FocusLost * set norelativenumber
-autocmd FocusGained * set relativenumber
-autocmd InsertEnter * set norelativenumber
-autocmd InsertLeave * set relativenumber
+" autocmd FocusLost * set norelativenumber
+" autocmd FocusGained * set relativenumber
+" autocmd InsertEnter * set norelativenumber
+" autocmd InsertLeave * set relativenumber
 
 " Toggle relative line numbers using <C-n>
 function! NumberToggle()
@@ -113,7 +113,7 @@ endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
 
-set relativenumber
+" set relativenumber
 set nu
 set numberwidth=2
 
