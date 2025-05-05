@@ -23,6 +23,7 @@ alias ghf="git push -f"
 alias ghv="git push --no-verify"
 alias ghfv="git push -f --no-verify"
 alias gp="git pull"
+alias gpb='git pull origin $(git rev-parse --abbrev-ref HEAD)'
 alias gch="git checkout"
 alias gd="git diff"
 alias gl='git log --graph --color --pretty=tformat:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"'
