@@ -14,6 +14,7 @@ source $ZSH/oh-my-zsh.sh
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
+alias gcv="git commit --no-verify"
 alias gcm="git commit -m"
 alias gac="git add -A && git commit -m"
 function gach { git add -A && git commit -m "$1" && git push }
