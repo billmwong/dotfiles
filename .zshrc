@@ -18,7 +18,7 @@ alias gcv="git commit --no-verify"
 alias gcm="git commit -m"
 alias gac="git add -A && git commit -m"
 function gach { git add -A && git commit -m "$1" && git push }
-function gachv { git add -A && git commit -m "$1" && git push --no-verify }
+function gachv { git add -A && git commit --no-verify -m "$1" && git push --no-verify }
 alias gh="git push"
 alias ghf="git push -f"
 alias ghv="git push --no-verify"
