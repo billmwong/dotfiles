@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs' " autocomplete matching quotes and paren
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion.
 " let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
-Plug 'ajh17/VimCompletesMe' " Sweet autocompletion.
+" Plug 'ajh17/VimCompletesMe' " Sweet autocompletion.
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 " Plug 'udalov/kotlin-vim' " kotlin syntax
 let g:javascript_plugin_jsdoc = 1

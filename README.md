@@ -42,8 +42,8 @@ git config --global interactive.diffFilter "diff-so-fancy --patch"
 brew install the_silver_searcher
 brew install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-brew install cmake
 echo "source ~/dotfiles/.vimrc" >> ~/.vimrc
+# Or if you didn't clone this repo, just download it from curl:
 curl -O https://raw.githubusercontent.com/billmwong/dotfiles/master/.vimrc
 vim +PlugInstall
 ```
